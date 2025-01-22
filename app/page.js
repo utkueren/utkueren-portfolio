@@ -1,101 +1,123 @@
+"use client"; // Bu satır eklendi
+
 import Image from "next/image";
+import React, { useState } from "react";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <header className="bg-primary shadow-md">
+        <nav className="container mx-auto flex items-center justify-between py-4 px-2">
+          {/* Logo */}
+          <div className="text-large font-regular tracking-headerSpacing text-white">
+            <a href="#" aria-label="Homepage">
+              UTKUEREN
+            </a>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          {/* Navigation Links */}
+          <div className="hidden md:flex space-x-12">
+            <a
+              href="#about"
+              className="text-white text-medium tracking-menuSpacing font-slim"
+            >
+              ABOUT
+            </a>
+            <a
+              href="#projects"
+              className="text-white text-medium tracking-menuSpacing font-slim"
+            >
+              PROJECTS
+            </a>
+            <a
+              href="#works"
+              className="text-white text-medium tracking-menuSpacing font-slim"
+            >
+              WORKS
+            </a>
+            <a
+              href="#contact"
+              className="text-white text-medium tracking-menuSpacing font-slim"
+            >
+              CONTACT
+            </a>
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <div className="md:hidden">
+            <button
+              aria-label="Open Menu"
+              className="text-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <svg
+                className="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+              <div className="flex flex-col items-center space-y-4 py-4">
+                <a
+                  href="#about"
+                  className="text-gray-600 hover:text-gray-900 transition"
+                >
+                  ABOUT
+                </a>
+                <a
+                  href="#projects"
+                  className="text-gray-600 hover:text-gray-900 transition"
+                >
+                  PROJECTS
+                </a>
+                <a
+                  href="#works"
+                  className="text-gray-600 hover:text-gray-900 transition"
+                >
+                  WORKS
+                </a>
+                <a
+                  href="#contact"
+                  className="text-gray-600 hover:text-gray-900 transition"
+                >
+                  CONTACT
+                </a>
+              </div>
+            </div>
+          )}
+        </nav>
+      </header>
+
+      <main>
+        <div className="flex flex-row align-middle justify-center">
+          <div className="text-xxxlarge flex flex-row leading-heroLine">
+            <h1 className="leading-heroLineUI">UI</h1>
+            <h1 className="leading-heroLineAlt">/</h1>
+          </div>
+          <div className="flex flex-col justify-center">
+            <div className="text-xxlarge leading-heroLine">
+              <h1>DESIGNER</h1>
+            </div>
+            <div className="text-xxlargealt leading-heroLine">
+              <h1>DEVELOPER</h1>
+            </div>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
