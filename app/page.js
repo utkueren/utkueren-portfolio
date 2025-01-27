@@ -1,5 +1,6 @@
 "use client"; // Bu satır eklendi
 
+import Marquee from "@/components/marquee";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -117,6 +118,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Marquee />
       </main>
     </>
   );

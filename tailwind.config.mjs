@@ -8,6 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        marquee: "marquee 10s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
       letterSpacing: {
         headerSpacing: "14px",
         menuSpacing: "6px",
@@ -28,7 +37,7 @@ export default {
 
       fontSize: {
         small: "1rem",
-        medium: "1.3rem",
+        medium: "1.6rem",
         large: "2rem",
         xlarge: "2.5rem",
         xxlarge: "15rem",
