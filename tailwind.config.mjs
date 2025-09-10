@@ -8,15 +8,27 @@ export default {
   ],
   theme: {
     extend: {
-      animation: {
-        marquee: "marquee 10s linear infinite",
+      fontFamily: {
+        josefin: ["var(--font-josefin)"],
       },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
         },
+
+        mousedot: {
+          "0%": { transform: "translate(-50%, 0)", opacity: ".2" },
+          "20%": { opacity: "1" },
+          "60%": { transform: "translate(-50%, 14px)", opacity: "1" },
+          "100%": { transform: "translate(-50%, 0)", opacity: ".2" },
+        },
       },
+      animation: {
+        marquee: "marquee 10s linear infinite",
+        mousedot: "mousedot 1.6s ease-in-out infinite",
+      },
+
       letterSpacing: {
         headerSpacing: "14px",
         menuSpacing: "6px",
@@ -28,6 +40,8 @@ export default {
       },
 
       fontWeight: {
+        xxslim: "100",
+        xslim: "200",
         slim: "300",
         regular: "400",
         medium: "500",
@@ -40,11 +54,9 @@ export default {
         medium: "1.6rem",
         large: "2rem",
         xlarge: "2.5rem",
-        xxlarge: "15rem",
-        xxlargealt: "13rem",
-        xxxlarge: "30rem",
-
-        xxxlargealt: "25rem",
+        "hero-xl": "clamp(2rem, 25vw, 28rem)", // UI/
+        "hero-md": "clamp(1.5rem, 13vw, 20rem)", // DESIGNER
+        "hero-sm": "clamp(1.5rem, 11.5vw, 19rem)", // DEVELOPER
       },
 
       colors: {
