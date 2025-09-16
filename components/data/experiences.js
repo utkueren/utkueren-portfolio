@@ -30,7 +30,7 @@ const experiences = [
     end: "MAY, 23",
     summary:
       "My job description was to improve the UI side of Jotform to be bug free. I mostly worked on responsiveness errors, RTL errors and various positioning errors. In this process, I worked with React.js and CSS/SCSS.",
-    logo: "/logos/jotform.png",
+    logo: "/logos/jotform2.png",
     accent: "from-amber-600 to-orange-500",
   },
   {
@@ -41,7 +41,7 @@ const experiences = [
     end: "SEP, 22",
     summary:
       "I developed a landing page and admin panel for Jotform during my internship. I conveyed my projects to the employees in the company with a presentation. I gained experience in this field by using flex and grid structures separately in my projects.",
-    logo: "/logos/jotform.png",
+    logo: "/logos/jotform2.png",
     accent: "from-amber-600 to-orange-500",
   },
 ];

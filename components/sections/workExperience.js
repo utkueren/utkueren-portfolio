@@ -12,18 +12,11 @@ export default function WorkExperience({
       aria-label={title}
       className="relative font-josefin mx-auto max-w-6xl px-4 py-48 sm:px-6 lg:px-8"
     >
-      <h2 className="mb-10 text-center text-2xl font-medium tracking-[0.35em] text-white/95 sm:text-3xl">
+      <h2 className="mb-16 text-center text-large2 font-medium tracking-[0.35em] text-white/95">
         {title}
       </h2>
 
-      {/* Tek, sürekli timeline çizgisi */}
-      <ol className="relative space-y-14">
-        <span
-          // left-6: li'lerdeki pl-12 ve 56px'lik LogoFrame ile hizalı (merkez)
-          className="pointer-events-none absolute left-0 top-0 bottom-0 w-px bg-white/40"
-          aria-hidden
-        />
-
+      <ol className="relative space-y-32">
         {items.map((item, i) => (
           <motion.div
             key={item.company + i}
@@ -32,6 +25,10 @@ export default function WorkExperience({
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: i * 0.05 }}
           >
+            <span
+              className="pointer-events-none h-5/6 absolute left-[5.5rem] sm:left-[6.5rem] -z-10 top-0 bottom-0 w-px bg-white/15"
+              aria-hidden
+            />
             <TimelineItem item={item} />
           </motion.div>
         ))}

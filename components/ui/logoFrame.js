@@ -16,8 +16,8 @@ export default function LogoFrame({ src, alt = "" }) {
             src={src}
             alt={alt}
             fill
-            sizes="56px" // container boyutu h-14 w-14 = 56px
-            className="rounded-xl object-cover"
+            sizes="112px" // container boyutu h-14 w-14 = 56px
+            className="rounded-xl object-contain"
             priority={false}
           />
         ) : (

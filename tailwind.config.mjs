@@ -51,8 +51,10 @@ export default {
 
       fontSize: {
         small: "1rem",
+        small2: "1.3rem",
         medium: "1.6rem",
         large: "2rem",
+        large2: "2.3rem",
         xlarge: "2.5rem",
         "hero-xl": "clamp(2rem, 25vw, 28rem)", // UI/
         "hero-md": "clamp(1.5rem, 13vw, 20rem)", // DESIGNER

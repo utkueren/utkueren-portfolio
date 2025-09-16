@@ -13,7 +13,7 @@ export default function TimelineItem({ item }) {
             } opacity-30 blur`}
             aria-hidden
           />
-          <LogoFrame src={item.logo} alt={item.company} />
+          <LogoFrame className="z-10" src={item.logo} alt={item.company} />
         </div>
 
         {/* CONTENT */}
@@ -33,7 +33,7 @@ export default function TimelineItem({ item }) {
             {item.start} – {item.end}
           </p>
 
-          <p className="mt-3 max-w-3xl text-small font-slim leading-relaxed text-white/80">
+          <p className="mt-3 max-w-3xl text-small2 font-xslim leading-relaxed text-white/80">
             {item.summary}
           </p>
         </div>
