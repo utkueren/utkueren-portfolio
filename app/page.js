@@ -4,6 +4,7 @@ import Marquee from "@/components/marquee";
 import Navbar from "@/components/navbar";
 import About from "@/components/sections/about";
 import Hero from "@/components/sections/hero";
+import WorkExperience from "@/components/sections/workExperience";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Marquee />
         <About />
+        <WorkExperience title="WORK EXPERIENCE" />
       </main>
     </>
   );
