@@ -3,17 +3,11 @@ import { motion } from "framer-motion";
 import experiences from "../data/experiences";
 import TimelineItem from "../ui/timelineItem";
 
-export default function WorkExperience({
-  title = "WORK EXPERIENCE",
-  items = experiences,
-}) {
+export default function WorkExperience({ items = experiences }) {
   return (
-    <section
-      aria-label={title}
-      className="relative font-josefin mx-auto max-w-6xl px-4 py-48 sm:px-6 lg:px-8"
-    >
+    <section className="relative font-josefin mx-auto max-w-6xl px-4 py-48 sm:px-6 lg:px-8">
       <h2 className="mb-16 text-center text-large2 font-medium tracking-[0.35em] text-white/95">
-        {title}
+        WORK EXPERIENCE
       </h2>
 
       <ol className="relative space-y-32">
