@@ -53,6 +53,7 @@ export default {
         small: "1rem",
         small2: "1.3rem",
         medium: "1.6rem",
+        medium2: "1.8rem",
         large: "2rem",
         large2: "2.3rem",
         xlarge: "2.5rem",
