@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      spacing: {
+        86: "86px",
+      },
+
       fontFamily: {
         josefin: ["var(--font-josefin)"],
       },
@@ -50,16 +54,13 @@ export default {
       },
 
       fontSize: {
-        small: "1rem",
-        small2: "1.3rem",
-        medium: "1.6rem",
-        medium2: "1.8rem",
-        large: "2rem",
-        large2: "2.3rem",
-        xlarge: "2.5rem",
-        "hero-xl": "clamp(2rem, 25vw, 28rem)", // UI/
-        "hero-md": "clamp(1.5rem, 13vw, 20rem)", // DESIGNER
-        "hero-sm": "clamp(1.5rem, 11.5vw, 19rem)", // DEVELOPER
+        xsmall: "1.5rem",
+        small: "1.7rem",
+        xmedium: "2.2rem",
+        medium: "2.5rem",
+        large: "3.75rem",
+        xlarge: "10rem",
+        xxlarge: "25rem",
       },
 
       colors: {

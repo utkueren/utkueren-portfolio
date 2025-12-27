@@ -3,9 +3,9 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="container mx-auto flex items-center justify-between py-4 pt-8 px-2">
+    <nav className="container mx-auto flex items-center justify-between py-4 pt-8 px-86">
       {/* Logo */}
-      <div className="text-large font-regular tracking-headerSpacing text-white">
+      <div className="text-medium font-regular tracking-headerSpacing text-white">
         <a href="#" aria-label="Homepage">
           UTKUEREN
         </a>
@@ -15,25 +15,25 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-12">
         <a
           href="#about"
-          className="text-white text-medium tracking-menuSpacing font-slim"
+          className="text-white text-small tracking-menuSpacing font-slim"
         >
           ABOUT
         </a>
         <a
           href="#projects"
-          className="text-white text-medium tracking-menuSpacing font-slim"
+          className="text-white text-small tracking-menuSpacing font-slim"
         >
           PROJECTS
         </a>
         <a
           href="#works"
-          className="text-white text-medium tracking-menuSpacing font-slim"
+          className="text-white text-small tracking-menuSpacing font-slim"
         >
           WORKS
         </a>
         <a
           href="#contact"
-          className="text-white text-medium tracking-menuSpacing font-slim"
+          className="text-white text-small tracking-menuSpacing font-slim"
         >
           CONTACT
         </a>

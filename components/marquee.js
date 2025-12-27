@@ -1,22 +1,19 @@
 import React from "react";
-import Svg from "@/components/svg/heroIcon";
 
 const Marquee = () => {
   const mail = "UTKUERENBULUT0@GMAIL.COM";
 
   return (
-    <div className="relative overflow-hidden bg-gray-100 py-4">
-      {/* İçeriği taşıyan ve kayan yapı */}
-      <div className="flex flex-row animate-marquee">
-        {/* Yeterli sayıda kopya oluştur */}
-        {[...Array(8)].map((_, index) => (
-          <span key={index} className="flex items-center">
-            <span className="text-large font-light text-black whitespace-nowrap">
+    <div className="overflow-hidden bg-gray-100 py-4">
+      {/* Menü padding'i ile aynı */}
+      <div className="px-[86px]">
+        <div className="flex whitespace-nowrap animate-marquee gap-10">
+          {[...Array(12)].map((_, index) => (
+            <span key={index} className="text-small font-light text-black">
               {mail}
             </span>
-            <Svg />
-          </span>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
