@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="container mx-auto flex items-center justify-between py-4 pt-8 px-86">
       {/* Logo */}
-      <div className="text-medium font-regular tracking-headerSpacing text-white">
+      <div className="text-medium font-regular font-josefin tracking-45p text-white">
         <a href="#" aria-label="Homepage">
           UTKUEREN
         </a>
@@ -15,25 +15,25 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-12">
         <a
           href="#about"
-          className="text-white text-small tracking-menuSpacing font-slim"
+          className="text-white text-small tracking-10p font-light"
         >
           ABOUT
         </a>
         <a
           href="#projects"
-          className="text-white text-small tracking-menuSpacing font-slim"
+          className="text-white text-small tracking-10p font-light"
         >
           PROJECTS
         </a>
         <a
           href="#works"
-          className="text-white text-small tracking-menuSpacing font-slim"
+          className="text-white text-small font-josefin tracking-10p font-light"
         >
           WORKS
         </a>
         <a
           href="#contact"
-          className="text-white text-small tracking-menuSpacing font-slim"
+          className="text-white text-small tracking-10p font-light"
         >
           CONTACT
         </a>

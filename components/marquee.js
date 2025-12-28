@@ -6,10 +6,13 @@ const Marquee = () => {
   return (
     <div className="overflow-hidden bg-gray-100 py-4">
       {/* Menü padding'i ile aynı */}
-      <div className="px-[86px]">
+      <div className="px-86">
         <div className="flex whitespace-nowrap animate-marquee gap-10">
           {[...Array(12)].map((_, index) => (
-            <span key={index} className="text-small font-light text-black">
+            <span
+              key={index}
+              className="text-small tracking-10p font-light text-black"
+            >
               {mail}
             </span>
           ))}

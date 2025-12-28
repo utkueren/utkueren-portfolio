@@ -2,24 +2,17 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center pb-[72px]">
-      {/* pb: tape yüksekliği kadar boşluk (gerekirse 64/80 yap) */}
-      <div className="flex flex-row items-center justify-center">
-        <div className="text-xxlarge flex flex-row leading-heroLine">
-          <h1 className="leading-heroLineUI">UI</h1>
-          <h1 className="leading-heroLineAlt">/</h1>
+    <section className="min-h-screen flex items-center justify-center px-86">
+      <div className="grid grid-cols-[auto_auto] grid-rows-2 items-center gap-x-10">
+        {/* UI/ iki satır kaplar */}
+        <div className="row-span-2 text-xxlarge leading-hero-ui flex items-center translate-y-hero-nudge">
+          <span className="-ml-2 inline-block translate-y-slash-nudge">UI</span>
+          <span className="-ml-2 inline-block translate-y-slash-nudge">/</span>
         </div>
-
-        <div className="flex flex-col justify-center">
-          <div className="text-xlarge leading-heroLine">
-            <h1>DESIGNER</h1>
-          </div>
-          <div className="text-xlarge leading-heroLine">
-            <h1>DEVELOPER</h1>
-          </div>
-        </div>
+        <h1 className="text-xlarge leading-hero-word tracking-7p">DESIGNER</h1>
+        <h1 className="text-xlarge leading-hero-word">DEVELOPER</h1>
       </div>
-    </div>
+    </section>
   );
 };
 

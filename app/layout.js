@@ -1,23 +1,21 @@
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 
-const josefin = Josefin_Sans({
-  variable: "--font-josefin",
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "600"],
-});
-
 export const metadata = {
   title: "UTKUEREN",
   description: "UTKUEREN's Portfolio",
 };
 
+const josefin = Josefin_Sans({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${josefin.variable}  antialiased bg-primary`}>
-        {children}
-      </body>
+    <html lang="tr">
+      <body className={josefin.className}>{children}</body>
     </html>
   );
 }

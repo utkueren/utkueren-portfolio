@@ -21,8 +21,6 @@ export default function Home() {
         {/* İlk ekran: Hero + Tape */}
         <section className="relative min-h-screen overflow-hidden">
           <Hero />
-
-          {/* Tape: SADECE Hero'da görünür, scroll'da kaybolur */}
           <div className="absolute bottom-0 left-0 w-full z-10">
             <Marquee />
           </div>

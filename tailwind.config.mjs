@@ -10,6 +10,18 @@ export default {
     extend: {
       spacing: {
         86: "86px",
+        "hero-nudge": "6px",
+        "slash-nudge": "10px",
+      },
+      lineHeight: {
+        // hero için özel line-height tokenları
+        "hero-ui": "0.85",
+        "hero-word": "0.90",
+
+        // istersen genel scale
+        tight: "0.95",
+        snug: "1.05",
+        normal: "1.2",
       },
 
       fontFamily: {
@@ -34,33 +46,33 @@ export default {
       },
 
       letterSpacing: {
-        headerSpacing: "14px",
-        menuSpacing: "6px",
-      },
-      lineHeight: {
-        heroLine: "1em",
-        heroLineAlt: "1.27em",
-        heroLineUI: "1.5em",
+        "7p": "0.07em",
+        "10p": "0.10em",
+        "45p": "0.45em",
       },
 
+      // lineHeight: {
+      //   heroLine: "1em",
+      //   heroLineAlt: "1.27em",
+      //   heroLineUI: "1.5em",
+      // },
+
       fontWeight: {
-        xxslim: "100",
-        xslim: "200",
-        slim: "300",
+        extraLight: "200",
+        light: "300",
         regular: "400",
         medium: "500",
         semiBold: "600",
         bold: "700",
       },
-
       fontSize: {
-        xsmall: "1.5rem",
-        small: "1.7rem",
-        xmedium: "2.2rem",
-        medium: "2.5rem",
-        large: "3.75rem",
-        xlarge: "10rem",
-        xxlarge: "25rem",
+        xsmall: "1rem", //16px
+        small: "1.2rem", //19px
+        xmedium: "1.7rem", //27px
+        medium: "2rem", //32px
+        large: "3.2rem", //51px
+        xlarge: "9rem", //144px
+        xxlarge: "20rem", //320px
       },
 
       colors: {
