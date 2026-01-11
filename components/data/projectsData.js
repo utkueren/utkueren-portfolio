@@ -9,13 +9,13 @@ const projects = [
     id: "dismas",
     title: "DISMAS STUDIO",
     subtitle: "BRAND IDENTITY • DEVELOPMENT",
-    img: "/logos/dismas2.png",
+    img: "/logos/dismas5.png",
   },
   {
     id: "arnavutkoy-bel",
     title: "ARNAVUTKÖY BEL.",
     subtitle: "UI DEVELOPMENT",
-    img: "/logos/Arnavutkoy.png",
+    img: "/logos/arnavutkoy4.png",
   },
 ];
 export default projects;

@@ -4,8 +4,8 @@ const experiences = [
     company: "Dismas Studio",
     role: "UI Designer / Developer",
     employmentType: "Remote / Freelance",
-    start: "AUG, 22",
-    end: "MAY, 23",
+    start: "NOV, 23",
+    end: "NOW",
     summary:
       "The software company I am a founding partner of in the KKTC implements its own projects / freelance projects. I worked in software development / designing and project management for a project that controls smart home systems.",
     logo: "/logos/dismas.png",

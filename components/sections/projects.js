@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <section className="py-16 sm:py-24">
       <div className="mx-auto max-w-[90rem] px-4">
-        <h2 className="mb-16 text-center text-large2 font-medium tracking-[0.35em] text-white/95">
+        <h2 className="mb-16 text-center text-medium font-medium tracking-[0.35em] text-white/95">
           PROJECTS
         </h2>
 
@@ -17,7 +17,7 @@ export default function Projects() {
               className="group relative rounded-2xl overflow-hidden bg-[#1A1A1A] shadow-[0_10px_30px_rgba(0,0,0,0.35)]  w-[90%] max-w-sm mx-auto sm:w-full"
             >
               {/* Görsel */}
-              <div className="relative aspect-[16/12] w-full">
+              <div className="relative aspect-[24/12] w-full">
                 <Image
                   src={p.img}
                   alt={p.title}
