@@ -1,53 +1,75 @@
-// components/Contact.js
 import Link from "next/link";
 
-export default function Contact({
-  email = "utkuerenbulut0@gmail.com",
-  message = "If you'd like to work together or just want to say 'Hi,' don't hesitate to drop me an email!",
-  buttonText = "MAIL ME",
-  className = "flex justify-around font-josefin text-small sm:text-small2 ",
-  maxWidth = "max-w-full",
-}) {
+const ROWS = 3;
+const TEXT = "CONTACT@UTKUEREN.DEV";
+
+function MarqueeRow({ reverse = false, opacityClass = "opacity-20" }) {
+  // translateX(-50%) animasyonu için içerik en az 2 kez tekrar etmeli
+  const items = Array.from({ length: 12 });
+
   return (
-    <div
-      className={[
-        "relative rounded-2xl bg-[#1A1A1A] text-white",
-        "px-6 sm:px-10 py-6 sm:py-8",
-        "shadow-[0_10px_30px_rgba(0,0,0,0.35)]",
-        "mx-auto",
-        maxWidth,
-        "flex items-center justify-between gap-6",
-        className,
-      ].join(" ")}
-    >
-      {/* dekoratif çerçeve/parıltı */}
+    <div className="overflow-hidden">
       <div
-        className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/5"
-        aria-hidden
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 rounded-2xl opacity-40"
-        style={{
-          background:
-            "radial-gradient(120% 80% at 0% 0%, rgba(255,255,255,.06), transparent 60%)",
-        }}
-      />
-
-      {/* Metin */}
-      <p className="flex-1 text-white/90 leading-relaxed text-small sm:text-large2 max-w-3xl whitespace-normal">
-        {message}
-      </p>
-
-      {/* Buton */}
-      <Link
-        href={`mailto:${email}`}
-        aria-label={`Send an email to ${email}`}
-        className="flex-shrink-0 inline-flex items-center rounded-xl bg-white text-black px-6 py-5 sm:px-12 sm:py-6 tracking-[0.35em] font-medium
-                   transition hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+        className={[
+          "flex whitespace-nowrap gap-16",
+          reverse
+            ? "animate-marquee [animation-direction:reverse]"
+            : "animate-marquee",
+          "will-change-transform",
+          opacityClass,
+        ].join(" ")}
       >
-        {buttonText}
-      </Link>
+        {items.map((_, i) => (
+          <span
+            key={i}
+            className="text-[clamp(2.5rem,6vw,5.5rem)] font-light tracking-[0.18em] text-white"
+          >
+            {TEXT}
+          </span>
+        ))}
+      </div>
     </div>
+  );
+}
+
+export default function Contact() {
+  return (
+    <section
+      id="contact"
+      className="relative overflow-hidden bg-black py-24 sm:py-32"
+    >
+      {/* Arkaplan marquee */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 flex flex-col justify-center gap-10">
+          <MarqueeRow opacityClass="opacity-[0.12]" />
+          <MarqueeRow reverse opacityClass="opacity-[0.10]" />
+          <MarqueeRow opacityClass="opacity-[0.08]" />
+        </div>
+
+        {/* hafif vignette / soft fade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black" />
+      </div>
+
+      {/* Ön içerik */}
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <h2 className="mb-16 text-center text-medium font-medium tracking-[0.35em] text-white/95">
+          CONTACT
+        </h2>
+
+        <div className="mx-auto max-w-4xl rounded-2xl bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] px-6 sm:px-10 py-8 sm:py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          <p className="text-white/90 font-light leading-relaxed text-small sm:text-xmedium max-w-3xl">
+            If youd like to work together or just want to say Hi, dont hesitate
+            to drop me an email!
+          </p>
+
+          <Link
+            href="mailto:contact@utkueren.dev"
+            className="inline-flex items-center rounded-xl bg-white text-black whitespace-nowrap px-8 py-5 tracking-[0.35em] font-medium transition hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+          >
+            MAIL ME
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }

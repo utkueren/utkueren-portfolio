@@ -66,6 +66,7 @@ export default {
         bold: "700",
       },
       fontSize: {
+        xxsmall: "0.8rem",
         xsmall: "1rem", //16px
         small: "1.2rem", //19px
         xmedium: "1.7rem", //27px

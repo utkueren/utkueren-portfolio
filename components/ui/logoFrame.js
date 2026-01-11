@@ -1,9 +1,21 @@
 // components/ui/LogoFrame.js
 import Image from "next/image";
 
-export default function LogoFrame({ src, alt = "", children }) {
+export default function LogoFrame({
+  src,
+  alt = "",
+  children,
+  size = "md", // md | sm
+}) {
+  const sizes = {
+    md: "h-20 w-20", // default (timeline vs)
+    sm: "h-12 w-12", // footer için
+  };
+
   return (
-    <div className="relative h-20 w-20 rounded-2xl border border-white/10 bg-white/5 p-1.5 backdrop-blur-md shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+    <div
+      className={`relative ${sizes[size]} rounded-2xl border border-white/10 bg-white/5 p-1.5 backdrop-blur-md shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]`}
+    >
       <span
         className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-white/25 to-transparent opacity-60"
         aria-hidden
@@ -18,12 +30,8 @@ export default function LogoFrame({ src, alt = "", children }) {
             sizes="80px"
             className="rounded-xl object-contain"
           />
-        ) : children ? (
-          children
         ) : (
-          <div className="grid h-full w-full place-items-center rounded-xl text-[10px] tracking-widest text-white/60">
-            LOGO
-          </div>
+          children
         )}
       </div>
     </div>
