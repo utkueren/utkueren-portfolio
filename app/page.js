@@ -12,16 +12,27 @@ import Footer from "@/components/sections/footer";
 export default function Home() {
   return (
     <>
-      {/* Navbar akışı itmesin, hero'nun üstünde dursun */}
+      {/* Navbar hero'nun üstünde dursun */}
       <header className="absolute top-0 left-0 w-full z-50">
         <Navbar />
       </header>
 
       <main className="bg-black text-white">
-        {/* İlk ekran: Hero + Tape */}
-        <section className="relative min-h-screen overflow-hidden">
-          <Hero />
-          <div className="absolute bottom-0 left-0 w-full z-10">
+        {/* FIRST SCREEN: Navbar + Hero + Marquee aynı ekranda */}
+        <section
+          className="
+            min-h-0 sm:min-h-screen
+ flex flex-col
+            pt-24 sm:pt-28   /* navbar için üst boşluk */
+          "
+        >
+          {/* Hero alanı */}
+          <div className="flex-1 flex items-center justify-center">
+            <Hero />
+          </div>
+
+          {/* Marquee: her zaman altta */}
+          <div className="shrink-0">
             <Marquee />
           </div>
         </section>

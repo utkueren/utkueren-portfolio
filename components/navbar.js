@@ -3,9 +3,9 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="container mx-auto flex items-center justify-between py-4 pt-8 px-86">
+    <nav className="container mx-auto flex items-center justify-between py-3 sm:py-4 pt-4 sm:pt-8 px-6 sm:px-86">
       {/* Logo */}
-      <div className="text-medium font-regular font-josefin tracking-45p text-white">
+      <div className="text-small sm:text-medium font-regular tracking-45p text-white">
         <a href="#" aria-label="Homepage">
           UTKUEREN
         </a>
