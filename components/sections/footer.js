@@ -5,7 +5,7 @@ import LogoFrame from "@/components/ui/logoFrame";
 export default function Footer() {
   const socials = [
     {
-      href: "https://linkedin.com/in/utkueren", // kendi linkinle değiştir
+      href: "https://www.linkedin.com/in/utku-eren-bulut-604b101a3/",
       label: "LinkedIn",
       icon: (
         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -13,17 +13,31 @@ export default function Footer() {
         </svg>
       ),
     },
+
     {
-      href: "https://dribbble.com", // kendi linkinle değiştir
+      href: "https://dribbble.com/utkueren",
       label: "Dribbble",
       icon: (
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-          <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm8.65 11.04c-1.2-.37-2.6-.57-4.16-.55-.07-1.5-.4-2.96-.97-4.33 2.37.97 4.12 3.07 5.13 4.88zM12 2.4c1.23 0 2.39.27 3.44.75-.45 1.2-1.05 2.35-1.79 3.41-1.4-.55-2.9-.95-4.47-1.18.92-1.54 1.97-2.94 2.82-2.98zM8.2 5.03c1.46.2 2.86.55 4.2 1.04-.95 1.22-2.1 2.35-3.44 3.35C7.7 7.73 6.7 6.25 6.08 5.2c.62-.09 1.32-.16 2.12-.17zM3.06 12c0-2.15.86-4.1 2.26-5.52.72 1.18 1.84 2.9 3.3 4.62-1.72.91-3.7 1.47-5.56 1.6V12zm8.94 9.6c-2.38 0-4.52-.95-6.09-2.5 1.2-1.62 2.95-3.22 5.28-4.55.55 1.5.98 3.1 1.27 4.78-.15 1.42-.3 2.2-.46 2.27zm2.54-.36c-.23-1.46-.6-2.9-1.1-4.27 1.5-.6 3.18-.95 5.02-.96-.93 2.3-2.86 4.1-4.92 5.23zM13.1 14.5c-.46-1.03-.99-2.03-1.59-2.99 1.04-.66 2-1.44 2.87-2.32.35 1.06.57 2.2.63 3.36-1.1.14-2.14.44-3.11.95zM16.03 13.1c1.6.02 3.02.26 4.2.68.07.4.11.81.11 1.22 0 .36-.03.71-.08 1.06-2.11-.02-4.02.35-5.69 1.05-.5-1.31-.99-2.67-1.54-3.98.92-.38 1.92-.62 3-.63z" />
+        <svg
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="9" />
+          <path d="M4.8 8.8c2.6 1.3 6 1.7 9.5 1.2" />
+          <path d="M6.2 16.8c1.9-2.1 5.3-3.3 9.6-3.1" />
+          <path d="M12.6 3.4c2 2.6 3.6 6.6 4.3 10.9" />
         </svg>
       ),
     },
     {
-      href: "https://x.com", // kendi linkinle değiştir
+      href: "https://x.com",
       label: "X",
       icon: (
         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -32,7 +46,7 @@ export default function Footer() {
       ),
     },
     {
-      href: "https://github.com/utkueren", // kendi linkinle değiştir
+      href: "https://github.com/utkueren",
       label: "GitHub",
       icon: (
         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -67,15 +81,17 @@ export default function Footer() {
 
         {/* made by */}
         <p className="text-small">
-          <span className="text-white/60">Made by </span>
-          <span className="tracking-[0.35em] text-white">U T K U E R E N</span>
+          <span className="text-white font-extralight">Made by </span>
+          <span className="text-small font-regular tracking-45p text-white">
+            UTKUEREN
+          </span>
         </p>
 
         {/* open source line */}
-        <p className="mt-6 text-small font-light sm:text-base text-white/50">
+        <p className="mt-6 text-small font-extraLight sm:text-base text-white">
           This portfolio is open source and the source code can be found on{" "}
           <Link
-            href="https://github.com/utkueren/portfolio"
+            href="https://github.com/utkueren/utkueren-portfolio"
             target="_blank"
             rel="noopener noreferrer"
             className="underline decoration-white/20 underline-offset-4 hover:decoration-white/60"
