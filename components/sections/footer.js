@@ -88,7 +88,7 @@ export default function Footer() {
         </p>
 
         {/* open source line */}
-        <p className="mt-6 text-small font-extraLight sm:text-base text-white">
+        <p className="mt-6 text-small font-extraLight sm:text-small text-white">
           This portfolio is open source and the source code can be found on{" "}
           <Link
             href="https://github.com/utkueren/utkueren-portfolio"

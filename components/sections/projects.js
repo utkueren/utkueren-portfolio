@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <section className="py-16 sm:py-24">
       <div className="mx-auto max-w-[90rem] px-4">
-        <h2 className="mb-16 text-center text-medium font-medium tracking-[0.35em] text-white/95">
+        <h2 className="mb-16 text-center text-xmedium sm:text-medium font-medium tracking-[0.35em] text-white/95">
           PROJECTS
         </h2>
 

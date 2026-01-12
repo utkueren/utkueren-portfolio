@@ -9,6 +9,7 @@ export default function LogoFrame({
 }) {
   const sizes = {
     md: "h-20 w-20", // default (timeline vs)
+    mdx: "h-16 w16",
     sm: "h-12 w-12", // footer için
   };
 

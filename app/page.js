@@ -27,7 +27,7 @@ export default function Home() {
           "
         >
           {/* Hero alanı */}
-          <div className="flex-1 flex items-center justify-center">
+          <div className="sm:flex-1 flex items-center justify-center">
             <Hero />
           </div>
 

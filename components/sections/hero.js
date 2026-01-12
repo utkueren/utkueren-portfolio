@@ -15,7 +15,7 @@ export default function Hero() {
       </div>
 
       {/* Center content */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto text-center py-10 sm:py-12">
+      <div className="relative z-10 w-full max-w-4xl mx-auto text-center pt-3 pb-10 sm:py-12">
         <p className="text-white/65 font-regular tracking-10p text-xsmall sm:text-small">
           JR. UI DEVELOPER & DESIGNER
         </p>

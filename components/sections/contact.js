@@ -56,15 +56,15 @@ export default function Contact() {
           CONTACT
         </h2>
 
-        <div className="mx-auto max-w-4xl rounded-2xl bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] px-6 sm:px-10 py-8 sm:py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
-          <p className="text-white/90 font-light leading-relaxed text-small sm:text-xmedium max-w-3xl">
+        <div className="mx-auto max-w-4xl  rounded-2xl bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] px-6 sm:px-10 py-8 sm:py-10 flex flex-col sm:flex-row items-center justify-between gap-8">
+          <p className="text-white/90 font-light leading-relaxed text-small sm:text-xmedium sm:text-start text-center max-w-3xl">
             If youd like to work together or just want to say Hi, dont hesitate
             to drop me an email!
           </p>
 
           <Link
             href="mailto:contact@utkueren.dev"
-            className="inline-flex items-center rounded-xl bg-white text-black whitespace-nowrap px-8 py-5 tracking-[0.35em] font-medium transition hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+            className="inline-flex  items-center rounded-xl bg-white text-black whitespace-nowrap px-8 py-5 tracking-[0.35em] font-medium transition hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           >
             MAIL ME
           </Link>
