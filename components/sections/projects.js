@@ -4,7 +4,7 @@ import projects from "../data/projectsData";
 
 export default function Projects() {
   return (
-    <section className="py-16 sm:py-24">
+    <section id="projects" data-reveal className="py-16 sm:py-24">
       <div className="mx-auto max-w-[90rem] px-4">
         <h2 className="mb-16 text-center text-xmedium sm:text-medium font-medium tracking-[0.35em] text-white/95">
           PROJECTS

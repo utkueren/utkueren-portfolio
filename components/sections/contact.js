@@ -36,6 +36,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
+      data-reveal
       className="relative overflow-hidden bg-black py-24 sm:py-32"
     >
       {/* Arkaplan marquee */}

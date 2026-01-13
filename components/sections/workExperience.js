@@ -4,7 +4,11 @@ import TimelineItem from "../ui/timelineItem";
 
 export default function WorkExperience({ items = experiences }) {
   return (
-    <section className="relative mx-auto max-w-6xl px-4 py-48 sm:px-6 lg:px-8">
+    <section
+      id="works"
+      data-reveal
+      className="relative mx-auto max-w-6xl px-4 py-48 sm:px-6 lg:px-8"
+    >
       <h2 className="mb-16 text-center text-xmedium sm:text-medium font-medium tracking-[0.35em] text-white/95">
         WORK EXPERIENCE
       </h2>

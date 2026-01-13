@@ -21,7 +21,7 @@ export default function Home() {
         {/* FIRST SCREEN: Navbar + Hero + Marquee aynı ekranda */}
         <section
           className="
-            min-h-0 sm:min-h-screen
+            min-h-0 md:min-h-screen
  flex flex-col
             pt-24 sm:pt-28   /* navbar için üst boşluk */
           "

@@ -1,24 +1,94 @@
+"use client";
+
 import React from "react";
 import ResumeButton from "@/components/ResumeButton";
+import { motion } from "framer-motion";
 
-const About = () => {
+/* Daha yavaş blur → netleşme */
+const revealBlur = {
+  hidden: {
+    opacity: 0,
+    y: 22,
+    filter: "blur(16px)",
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 1.75, // ⬅️ yavaşlatıldı (1.15 → 1.75)
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+const stagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.18, // ⬅️ yavaşladı
+      delayChildren: 0.15,
+    },
+  },
+};
+
+export default function About() {
   return (
-    <section className="min-h-0 sm:min-h-screen flex flex-col items-center justify-center gap-10 px-6 sm:mt-0 mt-36">
-      <div className="flex flex-col max-w-2xl text-center">
-        <h4 className="text-xmedium sm:text-medium font-regular">
+    <motion.section
+      id="about"
+      className="min-h-0 sm:min-h-screen flex flex-col items-center justify-center gap-10 px-6 sm:mt-0 mt-36"
+      variants={stagger}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
+      style={{ willChange: "transform, filter, opacity" }}
+    >
+      <motion.div
+        className="flex flex-col max-w-2xl text-center"
+        variants={stagger}
+      >
+        <motion.h4
+          variants={revealBlur}
+          className="text-xmedium sm:text-medium font-regular"
+        >
           Jr. UI Developer & Designer
-        </h4>
+        </motion.h4>
 
-        <p className="mt-8 text-small sm:text-medium font-light leading-relaxed">
+        <motion.p
+          variants={revealBlur}
+          className="mt-8 text-small sm:text-medium font-light leading-relaxed"
+        >
           Junior software engineer with UI project experience, problem solving
           skills, and a proven track record of meaningful contributions. Mostly
           focused on testing, bugs, vulnerabilities, and updates.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
-      <ResumeButton />
-    </section>
+      <motion.div
+        variants={{
+          hidden: {
+            opacity: 0,
+            y: 14,
+            filter: "blur(12px)",
+          },
+          show: {
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+            transition: {
+              duration: 1.55, // ⬅️ yavaşlatıldı
+              delay: 0.25, // ⬅️ CTA biraz daha geç
+              ease: [0.22, 1, 0.36, 1],
+            },
+          },
+        }}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+        style={{ willChange: "transform, filter, opacity" }}
+      >
+        <ResumeButton />
+      </motion.div>
+    </motion.section>
   );
-};
-
-export default About;
+}
