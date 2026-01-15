@@ -1,7 +1,7 @@
 import React from "react";
 
 const Marquee = () => {
-  const mail = "UTKUERENBULUT0@GMAIL.COM";
+  const mail = "CONTACT@UTKUEREN.DEV";
 
   return (
     <div className="overflow-hidden bg-gray-100 py-4">
