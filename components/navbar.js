@@ -1,12 +1,39 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useI18n } from "../app/i18n/i18nProvider";
+import { locales } from "../app/i18n/config";
+
+function switchLocale(pathname, nextLocale) {
+  const parts = pathname.split("/"); // ["", "tr", ...]
+  if (locales.includes(parts[1])) {
+    parts[1] = nextLocale;
+    return parts.join("/") || `/${nextLocale}`;
+  }
+  return `/${nextLocale}${pathname}`;
+}
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
 
   const close = () => setIsOpen(false);
+
+  // i18n + routing
+  const { locale, t } = useI18n();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const nextLocale = locale === "tr" ? "en" : "tr";
+
+  const changeLanguage = () => {
+    // Hash'i koru (örn #projects)
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
+    const nextPath = switchLocale(pathname, nextLocale) + (hash || "");
+    router.push(nextPath);
+    close();
+  };
 
   const scrollToId = (id) => (e) => {
     e?.preventDefault?.();
@@ -32,7 +59,6 @@ const Navbar = () => {
     close();
   };
 
-  // ESC ile kapat + body scroll lock
   useEffect(() => {
     const onKeyDown = (e) => {
       if (e.key === "Escape") setIsOpen(false);
@@ -69,10 +95,8 @@ const Navbar = () => {
 
   // Section reveal (fade-in) animasyonu
   useEffect(() => {
-    // data-reveal olanları al (önerilen)
     const targets = Array.from(document.querySelectorAll("[data-reveal]"));
 
-    // Eğer data-reveal yoksa, id’lere göre de fallback yap
     if (targets.length === 0) {
       ["about", "projects", "works", "contact"].forEach((id) => {
         const el = document.getElementById(id);
@@ -82,7 +106,6 @@ const Navbar = () => {
 
     if (!targets.length) return;
 
-    // Başlangıç state (bir kez)
     targets.forEach((el) => {
       el.style.opacity = "0";
       el.style.transform = "translateY(14px)";
@@ -97,7 +120,7 @@ const Navbar = () => {
           const el = en.target;
           el.style.opacity = "1";
           el.style.transform = "translateY(0)";
-          obs.unobserve(el); // bir kere animasyon
+          obs.unobserve(el);
         });
       },
       { threshold: 0.15 }
@@ -121,39 +144,59 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Links (lg ve üstü) */}
-        <div className="hidden lg:flex space-x-12">
+        <div className="hidden lg:flex items-center space-x-12">
           <a
             href="#about"
             onClick={scrollToId("about")}
             className="text-white text-small tracking-10p font-light"
           >
-            ABOUT
+            {t("nav.about", "ABOUT")}
           </a>
           <a
             href="#works"
             onClick={scrollToId("works")}
             className="text-white text-small tracking-10p font-light"
           >
-            WORKS
+            {t("nav.works", "WORKS")}
           </a>
           <a
             href="#projects"
             onClick={scrollToId("projects")}
             className="text-white text-small tracking-10p font-light"
           >
-            PROJECTS
+            {t("nav.projects", "PROJECTS")}
           </a>
           <a
             href="#contact"
             onClick={scrollToId("contact")}
             className="text-white text-small tracking-10p font-light"
           >
-            CONTACT
+            {t("nav.contact", "CONTACT")}
           </a>
+
+          {/* Language switch  */}
+          <button
+            type="button"
+            onClick={changeLanguage}
+            className="block text-white/90 tracking-[0.25em] text-xsmall font-light py-3 border-b border-white/10 hover:text-white transition "
+            aria-label="Change language"
+            title={`Switch to ${nextLocale.toUpperCase()}`}
+          >
+            {nextLocale.toUpperCase()}
+          </button>
         </div>
 
         {/* Hamburger (lg altı) */}
-        <div className="lg:hidden">
+        <div className="lg:hidden flex items-center gap-2">
+          <button
+            type="button"
+            onClick={changeLanguage}
+            className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-[12px] tracking-[0.35em] text-white/90 hover:bg-white/10 hover:border-white/30 transition"
+            aria-label="Change language"
+          >
+            {nextLocale.toUpperCase()}
+          </button>
+
           <button
             aria-label="Open Menu"
             aria-expanded={isOpen}
@@ -211,7 +254,9 @@ const Navbar = () => {
         >
           {/* Header */}
           <div className="flex items-center justify-between px-6 pt-6 pb-4">
-            <span className="text-small tracking-10p text-white/70">MENU</span>
+            <span className="text-small tracking-10p text-white/70">
+              {t("nav.menu", "MENU")}
+            </span>
             <button
               aria-label="Close"
               onClick={close}
@@ -224,7 +269,6 @@ const Navbar = () => {
                 stroke="currentColor"
                 strokeWidth="2"
               >
-                {/* X icon FIX */}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -241,29 +285,42 @@ const Navbar = () => {
               onClick={scrollToId("about")}
               className="block text-white/90 tracking-[0.25em] text-xsmall font-light py-3 border-b border-white/10 hover:text-white transition"
             >
-              ABOUT
+              {t("nav.about", "ABOUT")}
             </a>
+
             <a
               href="#projects"
               onClick={scrollToId("projects")}
               className="block text-white/90 tracking-[0.25em] text-xsmall font-light py-3 border-b border-white/10 hover:text-white transition"
             >
-              PROJECTS
+              {t("nav.projects", "PROJECTS")}
             </a>
+
             <a
               href="#works"
               onClick={scrollToId("works")}
               className="block text-white/90 tracking-[0.25em] text-xsmall font-light py-3 border-b border-white/10 hover:text-white transition"
             >
-              WORKS
+              {t("nav.works", "WORKS")}
             </a>
+
             <a
               href="#contact"
               onClick={scrollToId("contact")}
               className="block text-white/90 tracking-[0.25em] text-xsmall font-light py-3 border-b border-white/10 hover:text-white transition"
             >
-              CONTACT
+              {t("nav.contact", "CONTACT")}
             </a>
+
+            {/* Mobile dil seçimi (drawer içinde) */}
+            <button
+              type="button"
+              onClick={changeLanguage}
+              className="mt-4 w-full inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-3 py-3 text-[12px] tracking-[0.35em] text-white/90 hover:bg-white/10 hover:border-white/30 transition"
+              aria-label="Change language"
+            >
+              {t("nav.language", "LANGUAGE")}: {nextLocale.toUpperCase()}
+            </button>
           </div>
         </aside>
       </div>

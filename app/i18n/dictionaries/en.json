@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "menu": "MENU",
+    "about": "ABOUT",
+    "works": "WORKS",
+    "projects": "PROJECTS",
+    "contact": "CONTACT",
+    "language": "LANGUAGE"
+  }
+}
