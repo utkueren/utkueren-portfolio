@@ -1,8 +1,11 @@
 // components/Footer.jsx
 import Link from "next/link";
 import LogoFrame from "@/components/ui/logoFrame";
+import { useI18n } from "@/app/i18n/i18nProvider";
 
 export default function Footer() {
+  const { t } = useI18n();
+
   const socials = [
     {
       href: "https://www.linkedin.com/in/utku-eren-bulut-604b101a3/",
@@ -13,7 +16,6 @@ export default function Footer() {
         </svg>
       ),
     },
-
     {
       href: "https://dribbble.com/utkueren",
       label: "Dribbble",
@@ -81,24 +83,29 @@ export default function Footer() {
 
         {/* made by */}
         <p className="text-small">
-          <span className="text-white font-extralight">Made by </span>
+          <span className="text-white font-extralight">
+            {t("footer.madeByPrefix", "Made by ")}
+          </span>
           <span className="text-small font-regular tracking-45p text-white">
-            UTKUEREN
+            {t("footer.brand", "UTKUEREN")}
           </span>
         </p>
 
         {/* open source line */}
         <p className="mt-6 text-small font-extraLight sm:text-small text-white">
-          This portfolio is open source and the source code can be found on{" "}
+          {t(
+            "footer.openSourcePrefix",
+            "This portfolio is open source and the source code can be found on ",
+          )}
           <Link
             href="https://github.com/utkueren/utkueren-portfolio"
             target="_blank"
             rel="noopener noreferrer"
             className="underline decoration-white/20 underline-offset-4 hover:decoration-white/60"
           >
-            GitHub
+            {t("footer.githubText", "GitHub")}
           </Link>
-          .
+          {t("footer.openSourceSuffix", ".")}
         </p>
       </div>
     </footer>

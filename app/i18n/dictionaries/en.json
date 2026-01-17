@@ -7,19 +7,73 @@
     "contact": "CONTACT",
     "language": "LANGUAGE"
   },
+
   "about": {
-    "title": "Jr. UI Developer & Designer",
-    "description": "Junior software engineer with UI project experience, problem solving skills, and a proven track record of meaningful contributions. Mostly focused on testing, bugs, vulnerabilities, and updates."
+    "title": "Product Designer & Developer",
+    "description": "Computer engineer with a product-focused mindset, working across product design and product development. I enjoy turning complex ideas into intuitive, scalable, and user-centered digital products, with a strong focus on clean UI, usability, and real-world impact, while currently focusing on building AI-powered products and scalable digital experiences."
   },
 
   "hero": {
     "watermarkLeft": "UI",
     "watermarkSlash": "/",
     "watermarkRight": "UX",
-    "kicker": "JR. UI DEVELOPER & DESIGNER",
-    "headline": "UI DESIGNER & DEVELOPER",
-    "description": "Junior software engineer focused on clean UI implementation, responsiveness, and detail-driven interfaces.",
+    "kicker": "CURRENTLY WORKING ON AI-POWERED PRODUCTS",
+    "headline": "PRODUCT DESIGNER & DEVELOPER",
+    "description": "Computer engineer focused on product design and development, creating user-centered digital products and working on AI-powered products.",
     "ctaPrimary": "VIEW PROJECTS",
     "ctaSecondary": "MAIL ME"
+  },
+  "works": {
+    "title": "WORK EXPERIENCE"
+  },
+
+  "experiences": {
+    "dismas": {
+      "role": "UI Designer / Developer",
+      "employmentType": "Remote / Freelance",
+      "summary": "The software company I am a founding partner of in the KKTC implements its own projects and freelance projects. I worked in software development, UI design, and project management for a smart home control system."
+    },
+    "intale": {
+      "role": "UI Designer / Developer",
+      "employmentType": "Remote / Part-Time",
+      "summary": "I worked as a designer and developer on an AI-supported project that generated personalized children's fairy tales. I was also responsible for the web application design and WordPress landing page."
+    },
+    "jotform_parttime": {
+      "role": "UI Developer",
+      "employmentType": "Remote / Part-Time",
+      "summary": "I worked on improving the UI of Jotform by fixing responsiveness issues, RTL bugs, and layout problems using React.js and CSS/SCSS."
+    },
+    "jotform_intern": {
+      "role": "UI Developer",
+      "employmentType": "On-Site / Intern",
+      "summary": "During my internship at Jotform, I developed a landing page and an admin panel, presenting my projects to the team and gaining experience with Flexbox and Grid layouts."
+    }
+  },
+  "projects": {
+    "title": "PROJECTS",
+    "viewCase": "VIEW CASE",
+    "items": {
+      "talebot": { "subtitle": "DESIGN • DEVELOPMENT" },
+      "dismas": { "subtitle": "DESIGN • DEVELOPMENT" },
+      "arnavutkoyBel": { "subtitle": "CSS DEVELOPMENT" },
+      "yildiztas": { "subtitle": "DESIGN • DEVELOPMENT" },
+      "bikibris": { "subtitle": "MOBILE APP DESIGN" },
+      "when": { "subtitle": "DESIGN • DEVELOPMENT" }
+    }
+  },
+
+  "contact": {
+    "title": "CONTACT",
+    "description": "If you'd like to work together or just want to say hi, don't hesitate to drop me an email!",
+    "cta": "MAIL ME",
+    "marquee": "CONTACT@UTKUEREN.DEV"
+  },
+
+  "footer": {
+    "madeByPrefix": "Made by ",
+    "brand": "UTKUEREN",
+    "openSourcePrefix": "This portfolio is open source and the source code can be found on ",
+    "githubText": "GitHub",
+    "openSourceSuffix": "."
   }
 }

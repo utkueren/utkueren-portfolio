@@ -68,7 +68,7 @@ export default function Hero() {
 
       {/* Center content */}
       <motion.div
-        className="relative z-10 w-full max-w-4xl mx-auto text-center pt-3 pb-10 sm:py-12"
+        className="relative z-10 w-full max-w-6xl mx-auto text-center pt-3 pb-10 sm:py-12"
         variants={wrap}
         initial="hidden"
         animate="show"
@@ -77,14 +77,14 @@ export default function Hero() {
           variants={fadeUp}
           className="text-white/65 font-regular tracking-10p text-xsmall sm:text-small"
         >
-          {t("hero.kicker", "JR. UI DEVELOPER & DESIGNER")}
+          {t("hero.kicker", "CURRENTLY WORKING ON AI-POWERED PRODUCTS")}
         </motion.p>
 
         <motion.h1
           variants={fadeUp}
-          className="mt-6 tracking-7p leading-[0.95] text-[clamp(2.2rem,5.8vw,5.2rem)]"
+          className="mt-6 tracking-wider leading-[1.2] text-[clamp(2.2rem,5.8vw,5.2rem)]"
         >
-          {t("hero.headline", "UI DESIGNER & DEVELOPER")}
+          {t("hero.headline", "PRODUCT DESIGNER & DEVELOPER")}
         </motion.h1>
 
         <motion.p

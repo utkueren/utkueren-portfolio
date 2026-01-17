@@ -47,7 +47,7 @@ export default function About() {
       style={{ willChange: "transform, filter, opacity" }}
     >
       <motion.div
-        className="flex flex-col max-w-2xl text-center"
+        className="flex flex-col max-w-3xl text-center"
         variants={stagger}
       >
         <motion.h4
@@ -59,7 +59,7 @@ export default function About() {
 
         <motion.p
           variants={revealBlur}
-          className="mt-8 text-small sm:text-medium font-light leading-relaxed"
+          className="mt-8 text-small sm:text-xmedium font-extralight leading-relaxed"
         >
           {t(
             "about.description",

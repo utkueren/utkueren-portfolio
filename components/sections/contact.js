@@ -1,9 +1,9 @@
 import Link from "next/link";
+import { useI18n } from "@/app/i18n/i18nProvider";
 
 const ROWS = 3;
-const TEXT = "CONTACT@UTKUEREN.DEV";
 
-function MarqueeRow({ reverse = false, opacityClass = "opacity-20" }) {
+function MarqueeRow({ text, reverse = false, opacityClass = "opacity-20" }) {
   // translateX(-50%) animasyonu için içerik en az 2 kez tekrar etmeli
   const items = Array.from({ length: 12 });
 
@@ -24,7 +24,7 @@ function MarqueeRow({ reverse = false, opacityClass = "opacity-20" }) {
             key={i}
             className="text-[clamp(2.5rem,6vw,5.5rem)] font-light tracking-[0.18em] text-white"
           >
-            {TEXT}
+            {text}
           </span>
         ))}
       </div>
@@ -33,6 +33,8 @@ function MarqueeRow({ reverse = false, opacityClass = "opacity-20" }) {
 }
 
 export default function Contact() {
+  const { t } = useI18n();
+
   return (
     <section
       id="contact"
@@ -42,9 +44,19 @@ export default function Contact() {
       {/* Arkaplan marquee */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 flex flex-col justify-center gap-10">
-          <MarqueeRow opacityClass="opacity-[0.12]" />
-          <MarqueeRow reverse opacityClass="opacity-[0.10]" />
-          <MarqueeRow opacityClass="opacity-[0.08]" />
+          <MarqueeRow
+            text={t("contact.marquee", "CONTACT@UTKUEREN.DEV")}
+            opacityClass="opacity-[0.12]"
+          />
+          <MarqueeRow
+            text={t("contact.marquee", "CONTACT@UTKUEREN.DEV")}
+            reverse
+            opacityClass="opacity-[0.10]"
+          />
+          <MarqueeRow
+            text={t("contact.marquee", "CONTACT@UTKUEREN.DEV")}
+            opacityClass="opacity-[0.08]"
+          />
         </div>
 
         {/* hafif vignette / soft fade */}
@@ -54,20 +66,22 @@ export default function Contact() {
       {/* Ön içerik */}
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-16 text-center text-medium font-medium tracking-[0.35em] text-white/95">
-          CONTACT
+          {t("contact.title", "CONTACT")}
         </h2>
 
-        <div className="mx-auto max-w-4xl  rounded-2xl bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] px-6 sm:px-10 py-8 sm:py-10 flex flex-col sm:flex-row items-center justify-between gap-8">
+        <div className="mx-auto max-w-4xl rounded-2xl bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] px-6 sm:px-10 py-8 sm:py-10 flex flex-col sm:flex-row items-center justify-between gap-8">
           <p className="text-white/90 font-light leading-relaxed text-small sm:text-xmedium sm:text-start text-center max-w-3xl">
-            If youd like to work together or just want to say Hi, dont hesitate
-            to drop me an email!
+            {t(
+              "contact.description",
+              "If you'd like to work together or just want to say hi, don't hesitate to drop me an email!",
+            )}
           </p>
 
           <Link
             href="mailto:contact@utkueren.dev"
-            className="inline-flex  items-center rounded-xl bg-white text-black whitespace-nowrap px-8 py-5 tracking-[0.35em] font-medium transition hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+            className="inline-flex items-center rounded-xl bg-white text-black whitespace-nowrap px-8 py-5 tracking-[0.35em] font-medium transition hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           >
-            MAIL ME
+            {t("contact.cta", "MAIL ME")}
           </Link>
         </div>
       </div>

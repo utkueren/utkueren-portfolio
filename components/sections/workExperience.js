@@ -1,8 +1,13 @@
+"use client";
+
 import { motion } from "framer-motion";
 import experiences from "../data/experiences";
 import TimelineItem from "../ui/timelineItem";
+import { useI18n } from "@/app/i18n/i18nProvider";
 
 export default function WorkExperience({ items = experiences }) {
+  const { t } = useI18n();
+
   return (
     <section
       id="works"
@@ -10,7 +15,7 @@ export default function WorkExperience({ items = experiences }) {
       className="relative mx-auto max-w-6xl px-4 py-48 sm:px-6 lg:px-8"
     >
       <h2 className="mb-16 text-center text-xmedium sm:text-medium font-medium tracking-[0.35em] text-white/95">
-        WORK EXPERIENCE
+        {t("works.title", "WORK EXPERIENCE")}
       </h2>
 
       <ol className="relative space-y-32">

@@ -8,17 +8,70 @@
     "language": "DİL"
   },
   "about": {
-    "title": "Jr. UI Geliştirici & Tasarımcı",
-    "description": "UI odaklı projelerde deneyimi bulunan, problem çözme becerileri gelişmiş ve anlamlı katkılar sağladığını kanıtlamış junior yazılım geliştirici. Ağırlıklı olarak test, hata, güvenlik açıkları ve güncellemeler üzerine çalışmaktadır."
+    "title": "ÜRÜN TASARIMCISI & GELİŞTİRİCİ",
+    "description": "Bilgisayar Mühendisi olarak ürün tasarımı ve ürün geliştirme alanlarında ürün odaklı bir yaklaşımla çalışıyorum. Karmaşık fikirleri ölçeklenebilir ve kullanıcı merkezli dijital ürünlere dönüştürmeyi; temiz arayüzler, kullanılabilirlik ve gerçek dünya etkisi üzerine odaklanarak çözmeyi hedefliyorum, aynı zamanda AI destekli ürünler ve ölçeklenebilir dijital deneyimler geliştirme yönünde çalışmalarımı sürdürüyorum."
   },
   "hero": {
     "watermarkLeft": "UI",
     "watermarkSlash": "/",
     "watermarkRight": "UX",
-    "kicker": "JR. UI GELİŞTİRİCİ & TASARIMCI",
-    "headline": "UI TASARIMCI & GELİŞTİRİCİ",
-    "description": "Temiz UI uygulaması, responsive yapı ve detay odaklı arayüzler üzerine çalışan junior yazılım geliştirici.",
+    "kicker": "ŞU ANDA AI DESTEKLİ ÜRÜNLER ÜZERİNE ÇALIŞIYORUM",
+    "headline": "ÜRÜN TASARIMCISI & GELİŞTİRİCİSİ",
+    "description": "Bilgisayar Mühendisi olarak ürün tasarımı ve geliştirme odaklı, kullanıcı merkezli dijital ürünler geliştiriyorum.",
     "ctaPrimary": "PROJELERİ GÖR",
     "ctaSecondary": "MAİL AT"
+  },
+
+  "works": {
+    "title": "İŞ DENEYİMİ"
+  },
+  "experiences": {
+    "dismas": {
+      "role": "UI Tasarımcı / Geliştirici",
+      "employmentType": "Uzaktan / Freelance",
+      "summary": "Kurucu ortağı olduğum KKTC merkezli yazılım şirketinde, şirket içi ve freelance projelerde görev aldım. Akıllı ev sistemlerini kontrol eden bir projede yazılım geliştirme, UI tasarımı ve proje yönetimi alanlarında çalıştım."
+    },
+    "intale": {
+      "role": "UI Tasarımcı / Geliştirici",
+      "employmentType": "Uzaktan / Yarı Zamanlı",
+      "summary": "Yapay zeka destekli, kişiselleştirilmiş çocuk masalları üreten bir projede tasarımcı ve geliştirici olarak görev aldım. Ayrıca web uygulaması ve WordPress landing page tasarımından sorumluydum."
+    },
+    "jotform_parttime": {
+      "role": "UI Geliştirici",
+      "employmentType": "Uzaktan / Yarı Zamanlı",
+      "summary": "Jotform’da UI tarafındaki responsive, RTL ve konumlandırma hatalarının giderilmesi üzerine çalıştım. Bu süreçte React.js ve CSS/SCSS kullandım."
+    },
+    "jotform_intern": {
+      "role": "UI Geliştirici",
+      "employmentType": "Ofis / Stajyer",
+      "summary": "Jotform’daki stajım süresince bir landing page ve admin panel geliştirdim. Projelerimi ekip arkadaşlarıma sunarak Flexbox ve Grid yapılarıyla deneyim kazandım."
+    }
+  },
+  "projects": {
+    "title": "PROJELER",
+    "viewCase": "PROJEYİ İNCELE",
+    "items": {
+      "talebot": { "subtitle": "TASARIM • GELİŞTİRME" },
+      "dismas": { "subtitle": "TASARIM • GELİŞTİRME" },
+      "arnavutkoyBel": { "subtitle": "CSS GELİŞTİRME" },
+      "yildiztas": { "subtitle": "TASARIM • GELİŞTİRME" },
+      "bikibris": { "subtitle": "MOBİL UYGULAMA TASARIMI" },
+      "when": { "subtitle": "TASARIM • GELİŞTİRME" }
+    }
+  },
+
+  "contact": {
+    "title": "İLETİŞİM",
+    "description": "Birlikte çalışmak istersen ya da sadece selam vermek istersen, bana e-posta atmaktan çekinme!",
+    "cta": "MAIL AT",
+    "marquee": "CONTACT@UTKUEREN.DEV"
+  },
+
+  "footer": {
+    "madeByPrefix": "Hazırlayan ",
+    "brand": "UTKUEREN",
+    "openSourcePrefix": "Bu portfolyo açık kaynaklıdır ve kaynak kodlarına ",
+    "githubText": "GitHub",
+    "openSourceSuffix": " üzerinden ulaşabilirsiniz."
   }
 }
