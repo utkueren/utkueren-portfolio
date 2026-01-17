@@ -82,7 +82,7 @@ export default function Hero() {
 
         <motion.h1
           variants={fadeUp}
-          className="mt-6 tracking-wider leading-[1.2] text-[clamp(2.2rem,5.8vw,5.2rem)]"
+          className="mt-6 leading-[1.2] text-[clamp(2.2rem,5.8vw,5.2rem)]"
         >
           {t("hero.headline", "PRODUCT DESIGNER & DEVELOPER")}
         </motion.h1>

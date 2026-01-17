@@ -39,7 +39,7 @@ export default function About() {
   return (
     <motion.section
       id="about"
-      className="min-h-0 sm:min-h-screen flex flex-col items-center justify-center gap-10 px-6 sm:mt-0 mt-36"
+      className="min-h-0 sm:min-h-screen flex flex-col items-center justify-center gap-10 px-6 sm:mt-0 mt-20"
       variants={stagger}
       initial="hidden"
       whileInView="show"
@@ -47,7 +47,7 @@ export default function About() {
       style={{ willChange: "transform, filter, opacity" }}
     >
       <motion.div
-        className="flex flex-col max-w-3xl text-center"
+        className="flex flex-col max-w-5xl text-center"
         variants={stagger}
       >
         <motion.h4

@@ -21,7 +21,7 @@ const experiences = [
     company: "Jotform",
     start: "NOV, 22",
     end: "MAY, 23",
-    logo: "/logos/jotform2.png",
+    logo: "/logos/jotform.png",
     accent: "from-amber-600 to-orange-500",
   },
   {
@@ -29,7 +29,7 @@ const experiences = [
     company: "Jotform",
     start: "AUG, 22",
     end: "SEP, 22",
-    logo: "/logos/jotform2.png",
+    logo: "/logos/jotform.png",
     accent: "from-amber-600 to-orange-500",
   },
 ];

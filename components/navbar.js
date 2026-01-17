@@ -2,8 +2,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { useI18n } from "../app/i18n/i18nProvider";
-import { locales } from "../app/i18n/config";
+import { useI18n } from "@/app/i18n/i18nProvider";
+import { locales } from "@/app/i18n/config";
 
 function switchLocale(pathname, nextLocale) {
   const parts = pathname.split("/"); // ["", "tr", ...]
@@ -83,7 +83,6 @@ const Navbar = () => {
     const hash = window.location.hash?.replace("#", "");
     if (!hash) return;
 
-    // DOM yerleşsin diye küçük gecikme
     setTimeout(() => {
       const el = document.getElementById(hash);
       if (!el) return;
@@ -123,7 +122,7 @@ const Navbar = () => {
           obs.unobserve(el);
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     targets.forEach((el) => obs.observe(el));
@@ -137,7 +136,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-3 sm:py-4 pt-4 sm:pt-8 px-6 sm:px-86">
         {/* Logo */}
-        <div className="text-medium font-regular tracking-45p text-white">
+        <div className="text-small sm:text-medium font-regular tracking-45p text-white">
           <a href="#" aria-label="Homepage" onClick={(e) => e.preventDefault()}>
             UTKUEREN
           </a>
@@ -174,11 +173,11 @@ const Navbar = () => {
             {t("nav.contact", "CONTACT")}
           </a>
 
-          {/* Language switch  */}
+          {/* Language switch (DESKTOP) */}
           <button
             type="button"
             onClick={changeLanguage}
-            className="block text-white/90 tracking-[0.25em] text-xsmall font-light py-3 border-b border-white/10 hover:text-white transition "
+            className="text-white/90 tracking-[0.25em] text-xsmall font-light hover:text-white transition"
             aria-label="Change language"
             title={`Switch to ${nextLocale.toUpperCase()}`}
           >
@@ -186,17 +185,8 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Hamburger (lg altı) */}
-        <div className="lg:hidden flex items-center gap-2">
-          <button
-            type="button"
-            onClick={changeLanguage}
-            className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-[12px] tracking-[0.35em] text-white/90 hover:bg-white/10 hover:border-white/30 transition"
-            aria-label="Change language"
-          >
-            {nextLocale.toUpperCase()}
-          </button>
-
+        {/* Hamburger (lg altı) - sadece hamburger */}
+        <div className="lg:hidden flex items-center">
           <button
             aria-label="Open Menu"
             aria-expanded={isOpen}
