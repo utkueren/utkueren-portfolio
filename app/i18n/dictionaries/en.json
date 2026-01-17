@@ -13,6 +13,11 @@
     "description": "Computer engineer with a product-focused mindset, working across product design and product development. I enjoy turning complex ideas into intuitive, scalable, and user-centered digital products, with a strong focus on clean UI, usability, and real-world impact, while currently focusing on building AI-powered products and scalable digital experiences."
   },
 
+  "resume": {
+    "button": "RESUME",
+    "aria": "Download resume"
+  },
+
   "hero": {
     "watermarkLeft": "UI",
     "watermarkSlash": "/",

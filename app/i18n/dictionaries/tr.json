@@ -11,6 +11,12 @@
     "title": "ÜRÜN TASARIMCISI & GELİŞTİRİCİ",
     "description": "Bilgisayar Mühendisi olarak ürün tasarımı ve ürün geliştirme alanlarında ürün odaklı bir yaklaşımla çalışıyorum. Karmaşık fikirleri ölçeklenebilir ve kullanıcı merkezli dijital ürünlere dönüştürmeyi; temiz arayüzler, kullanılabilirlik ve gerçek dünya etkisi üzerine odaklanarak çözmeyi hedefliyorum, aynı zamanda AI destekli ürünler ve ölçeklenebilir dijital deneyimler geliştirme yönünde çalışmalarımı sürdürüyorum."
   },
+
+  "resume": {
+    "button": "ÖZGEÇMİŞ",
+    "aria": "Download resume"
+  },
+
   "hero": {
     "watermarkLeft": "UI",
     "watermarkSlash": "/",
