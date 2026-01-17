@@ -6,5 +6,20 @@
     "projects": "PROJECTS",
     "contact": "CONTACT",
     "language": "LANGUAGE"
+  },
+  "about": {
+    "title": "Jr. UI Developer & Designer",
+    "description": "Junior software engineer with UI project experience, problem solving skills, and a proven track record of meaningful contributions. Mostly focused on testing, bugs, vulnerabilities, and updates."
+  },
+
+  "hero": {
+    "watermarkLeft": "UI",
+    "watermarkSlash": "/",
+    "watermarkRight": "UX",
+    "kicker": "JR. UI DEVELOPER & DESIGNER",
+    "headline": "UI DESIGNER & DEVELOPER",
+    "description": "Junior software engineer focused on clean UI implementation, responsiveness, and detail-driven interfaces.",
+    "ctaPrimary": "VIEW PROJECTS",
+    "ctaSecondary": "MAIL ME"
   }
 }

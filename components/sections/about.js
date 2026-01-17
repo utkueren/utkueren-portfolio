@@ -3,6 +3,7 @@
 import React from "react";
 import ResumeButton from "@/components/ResumeButton";
 import { motion } from "framer-motion";
+import { useI18n } from "@/app/i18n/i18nProvider";
 
 /* Daha yavaş blur → netleşme */
 const revealBlur = {
@@ -16,7 +17,7 @@ const revealBlur = {
     y: 0,
     filter: "blur(0px)",
     transition: {
-      duration: 1.75, // ⬅️ yavaşlatıldı (1.15 → 1.75)
+      duration: 1.75,
       ease: [0.22, 1, 0.36, 1],
     },
   },
@@ -26,13 +27,15 @@ const stagger = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.18, // ⬅️ yavaşladı
+      staggerChildren: 0.18,
       delayChildren: 0.15,
     },
   },
 };
 
 export default function About() {
+  const { t } = useI18n();
+
   return (
     <motion.section
       id="about"
@@ -51,16 +54,17 @@ export default function About() {
           variants={revealBlur}
           className="text-xmedium sm:text-medium font-regular"
         >
-          Jr. UI Developer & Designer
+          {t("about.title", "Jr. UI Developer & Designer")}
         </motion.h4>
 
         <motion.p
           variants={revealBlur}
           className="mt-8 text-small sm:text-medium font-light leading-relaxed"
         >
-          Junior software engineer with UI project experience, problem solving
-          skills, and a proven track record of meaningful contributions. Mostly
-          focused on testing, bugs, vulnerabilities, and updates.
+          {t(
+            "about.description",
+            "Junior software engineer with UI project experience, problem solving skills, and a proven track record of meaningful contributions. Mostly focused on testing, bugs, vulnerabilities, and updates.",
+          )}
         </motion.p>
       </motion.div>
 
@@ -76,8 +80,8 @@ export default function About() {
             y: 0,
             filter: "blur(0px)",
             transition: {
-              duration: 1.55, // ⬅️ yavaşlatıldı
-              delay: 0.25, // ⬅️ CTA biraz daha geç
+              duration: 1.55,
+              delay: 0.25,
               ease: [0.22, 1, 0.36, 1],
             },
           },

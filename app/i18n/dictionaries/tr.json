@@ -6,5 +6,19 @@
     "projects": "PROJELER",
     "contact": "İLETİŞİM",
     "language": "DİL"
+  },
+  "about": {
+    "title": "Jr. UI Geliştirici & Tasarımcı",
+    "description": "UI odaklı projelerde deneyimi bulunan, problem çözme becerileri gelişmiş ve anlamlı katkılar sağladığını kanıtlamış junior yazılım geliştirici. Ağırlıklı olarak test, hata, güvenlik açıkları ve güncellemeler üzerine çalışmaktadır."
+  },
+  "hero": {
+    "watermarkLeft": "UI",
+    "watermarkSlash": "/",
+    "watermarkRight": "UX",
+    "kicker": "JR. UI GELİŞTİRİCİ & TASARIMCI",
+    "headline": "UI TASARIMCI & GELİŞTİRİCİ",
+    "description": "Temiz UI uygulaması, responsive yapı ve detay odaklı arayüzler üzerine çalışan junior yazılım geliştirici.",
+    "ctaPrimary": "PROJELERİ GÖR",
+    "ctaSecondary": "MAİL AT"
   }
 }
