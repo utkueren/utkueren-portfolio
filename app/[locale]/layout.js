@@ -23,12 +23,12 @@ export async function generateMetadata({ params }) {
   const isTR = locale === "tr";
 
   const title = isTR
-    ? "Utku Eren — Ürün Tasarımcısı & Geliştirici"
-    : "Utku Eren — Product Designer & Developer";
+    ? "UTKUEREN — Ürün Tasarımcısı & Geliştirici"
+    : "UTKUEREN — Product Designer & Developer";
 
   const description = isTR
-    ? "Bilgisayar ve yazılım mühendisi olarak ürün tasarımı ve geliştirme odaklı, kullanıcı merkezli dijital ürünler geliştiriyor; AI destekli ürünler üzerine çalışıyorum."
-    : "Computer and software engineer focused on product design and development, building user-centered digital products while working on AI-powered solutions.";
+    ? "Bilgisayar Mühendisi olarak ürün tasarımı ve geliştirme odaklı, kullanıcı merkezli dijital ürünler geliştiriyor; AI destekli ürünler üzerine çalışıyorum."
+    : "Computer Engineer focused on product design and development, building user-centered digital products while working on AI-powered solutions.";
 
   const url = `${baseUrl}/${locale}`;
 
