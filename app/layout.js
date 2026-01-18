@@ -14,8 +14,8 @@ const josefin = Josefin_Sans({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="tr">
-      <body className={josefin.className}>{children}</body>
+    <html lang="en" className={josefin.className} suppressHydrationWarning>
+      <body>{children}</body>
     </html>
   );
 }

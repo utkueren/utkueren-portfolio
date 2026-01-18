@@ -18,7 +18,7 @@ export default function WorkExperience({ items = experiences }) {
         {t("works.title", "WORK EXPERIENCE")}
       </h2>
 
-      <ol className="relative space-y-12">
+      <ol className="relative sm:space-y-32 space-y-12">
         {/* ONE vertical line for the whole timeline */}
         <span
           className="pointer-events-none absolute left-[2.5rem] sm:left-[6.5rem] top-0 h-[85%] z-0 w-[2px] bg-white/25"
