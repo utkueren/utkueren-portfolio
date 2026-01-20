@@ -18,7 +18,7 @@ const projects = [
     i18nKey: "projects.items.arnavutkoyBel",
     title: "ARNAVUTKÖY BEL.",
     subtitle: "CSS DEVELOPMENT",
-    img: "/logos/arnavutkoy.png",
+    img: "/logos/arnavutkoy-bel.png",
   },
   {
     id: "yildiztas",
