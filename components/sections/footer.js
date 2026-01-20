@@ -39,7 +39,7 @@ export default function Footer() {
       ),
     },
     {
-      href: "https://x.com",
+      href: "https://x.com/utkuernbb",
       label: "X",
       icon: (
         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
