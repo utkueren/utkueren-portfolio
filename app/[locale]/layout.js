@@ -2,6 +2,7 @@
 import { I18nProvider } from "../i18n/i18nProvider";
 import { getDictionary } from "../i18n/getDictionary";
 import { locales, defaultLocale } from "../i18n/config";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 const siteName = "Utku Eren";
 
@@ -80,6 +81,7 @@ export default async function LocaleLayout({ children, params }) {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <GoogleAnalytics />
       {children}
     </I18nProvider>
   );
