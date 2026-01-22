@@ -1,25 +1,19 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const gaId = process.env.NEXT_PUBLIC_GA_ID;
-    if (!gaId) return;
     if (typeof window === "undefined") return;
     if (typeof window.gtag !== "function") return;
 
-    const qs = searchParams?.toString();
-    const page_path = qs ? `${pathname}?${qs}` : pathname;
-
     window.gtag("event", "page_view", {
-      page_path,
+      page_path: pathname,
     });
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return null;
 }
