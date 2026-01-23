@@ -18,7 +18,7 @@ const josefin = Josefin_Sans({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={josefin.className} suppressHydrationWarning>
-      <body>
+      <body className="bg-black text-white">
         {gaId ? (
           <>
             <Script
