@@ -8,6 +8,8 @@ import {
   getProjectById,
 } from "@/components/data/projects.helpers";
 
+import BackButton from "@/components/ui/backButton";
+
 export function generateStaticParams() {
   const ids = getAllProjectIds();
   return locales.flatMap((locale) =>
@@ -24,7 +26,6 @@ export async function generateMetadata(props) {
   const project = getProjectById(params.project);
   if (!project) return {};
 
-  // şimdilik basic (istersen dict ile de zenginleştirirsin)
   const dict = await getDictionary(locale);
   const projectsTitle = dict?.projects?.title || "Projects";
 
@@ -45,6 +46,12 @@ export default async function ProjectDetailPage(props) {
 
   return (
     <main className="mx-auto max-w-[90rem] px-6 sm:px-12 lg:px-86 py-24">
+      {/* Back */}
+      <div className="mb-14">
+        <BackButton locale={locale} />
+      </div>
+
+      {/* Skeleton header */}
       <header className="max-w-3xl">
         <div className="text-xs tracking-[0.35em] text-white/50 uppercase">
           {project.subtitle}
@@ -61,6 +68,7 @@ export default async function ProjectDetailPage(props) {
         </p>
       </header>
 
+      {/* Skeleton content */}
       <section className="mt-14 rounded-2xl border border-white/10 bg-white/5 p-6">
         <div className="text-xs tracking-[0.35em] text-white/60 uppercase">
           {locale === "tr" ? "İçerik" : "Content"}
