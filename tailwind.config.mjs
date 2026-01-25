@@ -43,6 +43,7 @@ export default {
       animation: {
         marquee: "marquee 10s linear infinite",
         mousedot: "mousedot 1.6s ease-in-out infinite",
+        ProjectsMarquee: "marquee 30s linear infinite",
       },
 
       letterSpacing: {
