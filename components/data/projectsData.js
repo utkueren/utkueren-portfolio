@@ -2,25 +2,34 @@
 
 const projects = [
   {
-    id: "talebot", // slug -> /en/talebot
+    id: "talebot", // /en/talebot
     i18nKey: "projects.items.talebot",
     title: "TALEBOT",
     subtitle: "DESIGN • DEVELOPMENT",
     img: "/logos/talebotlogo.png",
 
-    // Case study template data (şimdilik skeleton)
     caseStudy: {
-      hero: {
-        cover: null,
-        coverAlt: "Talebot cover",
+      fold: {
+        media: {
+          type: "gallery", // "video" | "gallery" | "image"
+          videoSrc: null,
+          poster: null,
+          items: [],
+          imageSrc: null,
+          imageAlt: "Talebot media",
+        },
+
+        marqueeText: "PROJECT → TALEBOT",
+        heroTitle: "TALEBOT",
+        description: "",
+
+        meta: {
+          year: "",
+          service: "DESIGN, DEVELOPMENT",
+          client: "",
+          credits: [],
+        },
       },
-      meta: {
-        year: null,
-        role: null,
-        client: null,
-        tools: [],
-      },
-      blocks: [],
     },
   },
 
@@ -32,17 +41,32 @@ const projects = [
     img: "/logos/dismaslogo.png",
 
     caseStudy: {
-      hero: {
-        cover: null,
-        coverAlt: "Dismas Studio cover",
+      fold: {
+        media: {
+          type: "gallery",
+          videoSrc: null,
+          poster: null,
+          items: [],
+          imageSrc: null,
+          imageAlt: "Dismas media",
+        },
+
+        marqueeText: "PROJECT → DISMAS STUDIO",
+        heroTitle: "DISMAS STUDIO",
+        description:
+          "Creative & development studio blending bold ideas with smart technology.",
+
+        meta: {
+          year: "2025",
+          service: "DESIGN, DEVELOPMENT",
+          client: "DISMAS STUDIO",
+          credits: [
+            "ART DIRECTION: UTKU EREN",
+            "DESIGN: UTKU EREN",
+            "DEVELOPMENT: UTKU EREN",
+          ],
+        },
       },
-      meta: {
-        year: null,
-        role: null,
-        client: null,
-        tools: [],
-      },
-      blocks: [],
     },
   },
 
@@ -54,17 +78,27 @@ const projects = [
     img: "/logos/arnavutkoy-bel.png",
 
     caseStudy: {
-      hero: {
-        cover: null,
-        coverAlt: "Arnavutköy Belediyesi cover",
+      fold: {
+        media: {
+          type: "gallery",
+          videoSrc: null,
+          poster: null,
+          items: [],
+          imageSrc: null,
+          imageAlt: "Arnavutköy Belediyesi media",
+        },
+
+        marqueeText: "PROJECT → ARNAVUTKÖY BEL.",
+        heroTitle: "ARNAVUTKÖY BEL.",
+        description: "",
+
+        meta: {
+          year: "",
+          service: "CSS DEVELOPMENT",
+          client: "Arnavutköy Belediyesi",
+          credits: [],
+        },
       },
-      meta: {
-        year: null,
-        role: null,
-        client: "Arnavutköy Belediyesi",
-        tools: [],
-      },
-      blocks: [],
     },
   },
 
@@ -76,17 +110,27 @@ const projects = [
     img: "/logos/yildiztas.png",
 
     caseStudy: {
-      hero: {
-        cover: null,
-        coverAlt: "Yıldıztaş cover",
+      fold: {
+        media: {
+          type: "gallery",
+          videoSrc: null,
+          poster: null,
+          items: [],
+          imageSrc: null,
+          imageAlt: "Yıldıztaş media",
+        },
+
+        marqueeText: "PROJECT → YILDIZTAŞ",
+        heroTitle: "YILDIZTAŞ",
+        description: "",
+
+        meta: {
+          year: "",
+          service: "DESIGN, DEVELOPMENT",
+          client: "Yıldıztaş",
+          credits: [],
+        },
       },
-      meta: {
-        year: null,
-        role: null,
-        client: "Yıldıztaş",
-        tools: [],
-      },
-      blocks: [],
     },
   },
 
@@ -98,17 +142,27 @@ const projects = [
     img: "/logos/bikibris.png",
 
     caseStudy: {
-      hero: {
-        cover: null,
-        coverAlt: "BiKıbrıs cover",
+      fold: {
+        media: {
+          type: "gallery",
+          videoSrc: null,
+          poster: null,
+          items: [],
+          imageSrc: null,
+          imageAlt: "BiKıbrıs media",
+        },
+
+        marqueeText: "PROJECT → BİKIBRIS",
+        heroTitle: "BİKIBRIS",
+        description: "",
+
+        meta: {
+          year: "",
+          service: "MOBILE APP DESIGN",
+          client: "",
+          credits: [],
+        },
       },
-      meta: {
-        year: null,
-        role: "Mobile App Design",
-        client: null,
-        tools: [],
-      },
-      blocks: [],
     },
   },
 
@@ -120,17 +174,27 @@ const projects = [
     img: "/logos/when.png",
 
     caseStudy: {
-      hero: {
-        cover: null,
-        coverAlt: "When cover",
+      fold: {
+        media: {
+          type: "gallery",
+          videoSrc: null,
+          poster: null,
+          items: [],
+          imageSrc: null,
+          imageAlt: "When media",
+        },
+
+        marqueeText: "PROJECT → WHEN",
+        heroTitle: "WHEN",
+        description: "",
+
+        meta: {
+          year: "",
+          service: "DESIGN, DEVELOPMENT",
+          client: "",
+          credits: [],
+        },
       },
-      meta: {
-        year: null,
-        role: null,
-        client: null,
-        tools: [],
-      },
-      blocks: [],
     },
   },
 ];
