@@ -54,7 +54,7 @@ const projects = [
         marqueeText: "PROJECT → DISMAS STUDIO",
         heroTitle: "DISMAS STUDIO",
         description:
-          "Creative & development studio blending bold ideas with smart technology.",
+          "Dismas Studio is a design and development studio based in Northern Cyprus, co-founded by me. I led the entire brand identity process, from logo design inspired by Saint Dismas to the website’s UI and development. The studio was built around a minimal, professional visual language, using subtle animations and a calm color palette to balance aesthetics with usability while blending bold ideas with smart technology.",
 
         meta: {
           year: "2025",
