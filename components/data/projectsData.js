@@ -187,7 +187,8 @@ const projects = [
 
         marqueeText: "PROJECT → WHEN",
         heroTitle: "WHEN",
-        description: "",
+        description:
+          "WHEN is a social platform based in Northern Cyprus that allows users to discover and follow events happening at entertainment venues across the island, similar in concept to Turkey’s BuGece app. I worked on the project from a product design and development perspective, focusing on creating a clear, social-first experience that makes discovering events fast and intuitive. The platform was designed to connect venues and users through a modern interface, emphasizing usability, real-time updates, and community-driven interaction.",
 
         meta: {
           year: "",
