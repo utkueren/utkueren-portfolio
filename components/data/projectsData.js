@@ -91,7 +91,8 @@ const projects = [
 
         marqueeText: "PROJECT → ARNAVUTKÖY BEL.",
         heroTitle: "ARNAVUTKÖY BEL.",
-        description: "",
+        description:
+          "For Arnavutköy Municipality’s e-Municipality platform, I worked on UI improvements prior to its public release. Based on an official revision and feedback report provided by the municipality, I refined interface components, layout structure, and interaction details to improve clarity, accessibility, and overall usability. The work focused on aligning the user experience with public sector requirements while ensuring a clear and efficient digital service flow.",
 
         meta: {
           year: "",
