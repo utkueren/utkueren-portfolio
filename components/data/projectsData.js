@@ -125,7 +125,7 @@ const projects = [
         marqueeText: "PROJECT → YILDIZTAŞ",
         heroTitle: "YILDIZTAŞ",
         description:
-          "Yıldıztaş is a construction company based in Northern Cyprus. I led the complete brand identity process from the ground up, including logo design, visual language definition, and the overall brand positioning. In addition to the identity work, I designed and developed the company’s website, focusing on a clean, professional structure that reflects trust, reliability, and long-term value within the construction industry.",
+          "Yıldıztaş is a construction company based in Northern Cyprus. I led the complete brand identity process from the ground up, including logo design, visual language definition, development and the overall brand positioning. In addition to the identity work, I designed and developed the company’s website, focusing on a clean, professional structure that reflects trust, reliability, and long-term value within the construction industry.",
         meta: {
           year: "",
           service: "DESIGN, DEVELOPMENT",
