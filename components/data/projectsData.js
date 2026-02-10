@@ -25,7 +25,7 @@ const projects = [
           "Talebot is an AI-based product focused on personalized content generation. I worked on the project as both designer and developer, contributing to the product design and development of AI-powered personalized children’s stories. I was also responsible for the design of the web application and the WordPress landing page. In addition, I worked on API integrations for a separate AI-driven project that generates personalized rap songs, focusing on connecting and structuring AI services within a scalable product architecture.",
 
         meta: {
-          year: "",
+          year: "2024",
           service: "DESIGN, DEVELOPMENT",
           client: "",
           credits: [],
